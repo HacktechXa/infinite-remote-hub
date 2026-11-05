@@ -99,7 +99,7 @@ class PackageTests(unittest.TestCase):
         new_layout = json.loads((self.folder / 'layout.json').read_text())
         self.assertEqual({key['id']: key['name']['en'] for key in new_layout['keys'] if key['id'] in ('ok', 'plus', 'minus')},
                          {'ok': 'OK', 'plus': 'Vol +', 'minus': 'Vol −'})
-        self.assertEqual(new['release'], '1.0.1')
+        self.assertEqual(new['release'], '0.0.1')
         for key in new_layout['keys']:
             self.assertEqual(set(key['name']), {'en', 'zh'})
             key['name'] = key['name']['zh']
@@ -402,7 +402,7 @@ class PackageTests(unittest.TestCase):
         self.assertEqual(catalog['formatVersion'], 2)
         self.assertEqual(catalog['id'], 'infinite-remote-official')
         self.assertEqual(set(catalog['name']), {'en', 'zh'})
-        self.assertEqual(model['release'], '1.0.1')
+        self.assertEqual(model['release'], '0.0.1')
         self.assertEqual(model['brand']['id'], 'xiaomi')
         for path in (model['preview'], model['brand']['logo'], model['package']):
             self.assertFalse(Path(path).is_absolute())

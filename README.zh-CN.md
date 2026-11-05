@@ -4,7 +4,7 @@
 
 Infinite Remote 的独立遥控器适配库。首个型号是小米蓝牙遥控器 2 Pro。新型号使用 v2 包格式，包含中英文字、品牌图标、默认动作与行为声明；工具也接受旧版 v1 包。无需第三方 Python 包，要求 Python 3.10+。
 
-GitHub 仓库为 `HacktechXa/infinite-remote-hub`。
+GitHub 仓库为 `szhjia/infinite-remote-hub`。
 
 ## 使用与命令
 
@@ -29,7 +29,7 @@ python3 scripts/remote_hub.py export-source --output /absolute/path/to/source
 python3 scripts/remote_hub.py export-web --output /absolute/path/to/website/public/hub
 ```
 
-不要通过软链接、子模块或隐式相邻路径连接仓库。更新型号后先校验与测试，再显式同步并检查目标仓差异。打包固定顺序、时间和权限，相同内容产生相同 SHA256。引用的资源不允许软链接或路径穿越。导出仅写入明确目标，不发布、不创建远端。官方订阅地址为 `https://raw.githubusercontent.com/HacktechXa/infinite-remote-hub/main/catalog.json`；发布是独立授权操作：校验导出后，将 catalog.json、packages、assets 提交并推送到公开 hub 仓库，再检查公开目录与资源包哈希。本地导出完成不代表订阅已上线。具体协议见 [PROTOCOL.md](PROTOCOL.md)。
+不要通过软链接、子模块或隐式相邻路径连接仓库。更新型号后先校验与测试，再显式同步并检查目标仓差异。打包固定顺序、时间和权限，相同内容产生相同 SHA256。引用的资源不允许软链接或路径穿越。导出仅写入明确目标，不发布、不创建远端。官方订阅地址为 `https://raw.githubusercontent.com/szhjia/infinite-remote-hub/main/catalog.json`；发布是独立授权操作：校验导出后，将 catalog.json、packages、assets 提交并推送到公开 hub 仓库，再检查公开目录与资源包哈希。本地导出完成不代表订阅已上线。具体协议见 [PROTOCOL.md](PROTOCOL.md)。
 
 ## 型号说明与来源
 
@@ -39,7 +39,7 @@ python3 scripts/remote_hub.py export-web --output /absolute/path/to/website/publ
 
 ## Star 历史
 
-[![Star History Chart](https://api.star-history.com/svg?repos=HacktechXa/infinite-remote-hub&type=Date)](https://star-history.com/#HacktechXa/infinite-remote-hub&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=szhjia/infinite-remote-hub&type=Date)](https://star-history.com/#szhjia/infinite-remote-hub&Date)
 
 ## 许可证
 

@@ -4,7 +4,7 @@
 
 The independent remote-adaptation library for Infinite Remote. The first supported model is the Xiaomi Bluetooth Remote 2 Pro. New adapters use package format v2, with English/Chinese copy, brand artwork, explicit defaults and behavior. The validator also accepts legacy v1 packages. The tools require Python 3.10 or later and use only the Python standard library.
 
-The GitHub repository is `HacktechXa/infinite-remote-hub`.
+The GitHub repository is `szhjia/infinite-remote-hub`.
 
 ## Commands
 
@@ -29,7 +29,7 @@ python3 scripts/remote_hub.py export-source --output /absolute/path/to/source
 python3 scripts/remote_hub.py export-web --output /absolute/path/to/website/public/hub
 ```
 
-Do not connect the repositories through symlinks, submodules, or implicit sibling paths. After updating a model, validate and test it first, then synchronize explicitly and inspect the target repository's diff. Packaging fixes order, timestamps, and permissions so identical content produces identical SHA256 hashes. Referenced resources reject symlinks and path traversal. Export is local and explicit; it never publishes or creates a remote. The official subscription URL is `https://raw.githubusercontent.com/HacktechXa/infinite-remote-hub/main/catalog.json`; publication is a separate authorized operation: verify the export, commit and push catalog.json/packages/assets to the public hub repository, then check the public index and package hashes. A local export alone is not proof that the subscription is live. See [PROTOCOL.md](PROTOCOL.md) for exact package and source contracts.
+Do not connect the repositories through symlinks, submodules, or implicit sibling paths. After updating a model, validate and test it first, then synchronize explicitly and inspect the target repository's diff. Packaging fixes order, timestamps, and permissions so identical content produces identical SHA256 hashes. Referenced resources reject symlinks and path traversal. Export is local and explicit; it never publishes or creates a remote. The official subscription URL is `https://raw.githubusercontent.com/szhjia/infinite-remote-hub/main/catalog.json`; publication is a separate authorized operation: verify the export, commit and push catalog.json/packages/assets to the public hub repository, then check the public index and package hashes. A local export alone is not proof that the subscription is live. See [PROTOCOL.md](PROTOCOL.md) for exact package and source contracts.
 
 ## Model Guides and Provenance
 
@@ -39,7 +39,7 @@ Device artwork, source records, and third-party materials retain their original 
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=HacktechXa/infinite-remote-hub&type=Date)](https://star-history.com/#HacktechXa/infinite-remote-hub&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=szhjia/infinite-remote-hub&type=Date)](https://star-history.com/#szhjia/infinite-remote-hub&Date)
 
 ## License
 

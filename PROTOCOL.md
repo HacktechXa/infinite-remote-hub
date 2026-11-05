@@ -45,10 +45,14 @@ Behavior arrays `coalescedKeys`, `deferredKeys`, `nativeDictationKeys` contain d
 
 The catalog is `{ "formatVersion": 2, "id": "infinite-remote-official", "name": {"en":"Infinite Remote Hub","zh":"无限遥控器资源库"}, "models": [...] }`. Each entry contains id, release, localized name/summary/brand, devices, preview, package and packageSHA256. `sourceSHA256` remains a filename-to-SHA256 dictionary for website compatibility. Bilingual setup/limitations come from model metadata and remain arrays of strings. Exported brand logo paths refer to exported assets, rather than the package filename. Entries use stable folder order; ZIPs use sorted names, fixed timestamps and Unix file permissions, with no host-specific metadata.
 
-The official URL is `https://raw.githubusercontent.com/HacktechXa/infinite-remote-hub/main/catalog.json`. Export locally, verify the generated catalog, packages and assets, then commit and push those files to the public hub repository in a separately authorized publication step. Verify the public index and package hashes after publication. Generating a local export alone does not make it available there. The app verifies download hashes and package identity/release, rejects source ownership changes and device conflicts, and allows updates only to a higher release from the same owner. User mappings are stored separately. Installed packages work offline.
+The official URL is `https://raw.githubusercontent.com/szhjia/infinite-remote-hub/main/catalog.json`. Export locally, verify the generated catalog, packages and assets, then commit and push those files to the public hub repository in a separately authorized publication step. Verify the public index and package hashes after publication. Generating a local export alone does not make it available there. The app verifies download hashes and package identity/release, rejects source ownership changes and device conflicts, and allows updates only to a higher release from the same owner. User mappings are stored separately. Installed packages work offline.
 
 ## Compatibility and verification
 
 The immutable v1 package fixture under `tests/fixtures/v1/` verifies legacy parsing independently of the v2 maintained model. Source-copy `sync-app --app PATH` is retained as a legacy explicit developer tool, including referenced logos; it is not used to bundle real models into production. Install through a source or local ZIP instead.
 
 After implementation and test authoring, run `python3 scripts/remote_hub.py validate`, `python3 -m unittest discover -s tests -v`, and deterministic export/ZIP roundtrips. Optional artwork QA has separate Pillow dependencies. Record actual physical hardware coverage in HARDWARE-TEST-TEMPLATE.md; tooling checks do not prove physical device behavior.
+
+## Independent model releases
+
+Each model maintains its own semantic `release`, independent of the app and of other models. Xiaomi Bluetooth Remote 2 Pro starts its public release line at `0.0.1`. Protocol `version` remains `2`; it is not the model release. GitHub release tags use `<model-id>/v<release>` (for example `xiaomi-2-pro/v0.0.1`).

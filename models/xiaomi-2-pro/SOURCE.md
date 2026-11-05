@@ -41,3 +41,7 @@ The Xiaomi mark identifies the supported device brand. Xiaomi retains its tradem
 ## Release 1.0.1: compact English key labels (2026-11-05)
 
 Native English UI verification found the existing annotation/name lanes could truncate “Confirm” and “Volume up/down”. Release 1.0.1 changes only these English key labels to “OK”, “Vol +” and “Vol −”, preserving the shared renderer and its established dimensions. Chinese names, all IDs/HID rules, artwork, geometry, defaults and full hardware descriptions are unchanged. The release is incremented because 1.0.0 has already been published; published package bytes are not silently replaced under the same version.
+
+## Public release line 0.0.1 (2026-11-05)
+
+The owner requested the first personal-account public release to use `0.0.1`, independently of the application version. The earlier `1.0.0`/`1.0.1` development publication history above is retained for provenance. The new package declares `0.0.1` and receives a new ZIP hash; it does not reuse an earlier version's bytes or disable downgrade protection. Device IDs, HID mappings, artwork, geometry and translated key labels are unchanged.
