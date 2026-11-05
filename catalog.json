@@ -44,7 +44,7 @@
           "Install this model from the library or import its ZIP; updates require a higher release from the same source."
         ]
       },
-      "release": "1.0.0",
+      "release": "1.0.1",
       "devices": [
         {
           "vendor": 10007,
@@ -53,16 +53,16 @@
       ],
       "preview": "assets/xiaomi-2-pro/front.png",
       "package": "packages/xiaomi-2-pro.zip",
-      "packageSHA256": "532a02ecf3c680343884bf060ded24904cecc8a63bd7855325f6a00564a00998",
+      "packageSHA256": "0d08b5b3e8721c04e03e8fd8cf0bb8af62f69f7506c33ad9a5e2ca9cae3f1a13",
       "sourceSHA256": {
-        "README.en.md": "37018b4280cf77656ffbbb7f7abe50b687ea9ffe33c07e0d6f62c4ab8594a40a",
-        "README.zh.md": "295c399c5cd47a6b57759ad1dc1f6a60e29c48d96bb768e3c0f47e62212742db",
-        "SOURCE.md": "58bd06f10a2b0dd26a79cf7505e3bcbd088d56e4b2fdba4cb1de0a2bb9a70cd1",
+        "README.en.md": "49bf0f7bb7d5ad4e2f312ddc55bddaefc1101c348993b343c6565503f304a304",
+        "README.zh.md": "79c2443f9e43555bdd291d213785444e3184db440cdefb7192d2bdeb0ce59036",
+        "SOURCE.md": "7442e851f0e566dcbe896952ec5dc65d2d97aae9ae23106846006f28a63d933b",
         "brand.png": "cbd7602e878c987180cbb14e86aa241541e3523e85362e1ac0bc7b896f93ea65",
         "front.png": "981bd8a7144d27d8a4cd3706843b4f2d2641450ce9eb27a563f7c6541b94b221",
         "inputs.json": "ed9456f2bdddaeb4269f12f12bc65cf2309a4a406ed59740d77af020c24a03da",
-        "layout.json": "7bb3f3523f667c9aaa8142ecdfe63f4076859bf0c5ca16569d95178279d3efe7",
-        "manifest.json": "5e9c99cff35f9c0d5f1ea8b37b0b13836c862e0759514b126aad9c6e5be13f0d",
+        "layout.json": "6daa191e7c937525da0583265aea40dfc46c2a4dc48b708a42a494a709d81667",
+        "manifest.json": "e2d040b34388f1ea4dfd89540ea45498a7d5ba1cd814b3e0bf28f7aff6e7ccb6",
         "metadata.json": "0d430c9e985107c5638256b968945c5667838de01cc7116771f448225f500d14"
       },
       "brand": {

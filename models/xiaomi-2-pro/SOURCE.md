@@ -37,3 +37,7 @@ Protocol v2 adds English/Chinese names, summaries, key/capability descriptions a
 - No generative recreation, recoloring, tracing, cropping or resizing was applied.
 
 The Xiaomi mark identifies the supported device brand. Xiaomi retains its trademark and asset rights; public availability is not a license grant or an endorsement of this project. This provenance is separate from the generated product artwork record above.
+
+## Release 1.0.1: compact English key labels (2026-11-05)
+
+Native English UI verification found the existing annotation/name lanes could truncate “Confirm” and “Volume up/down”. Release 1.0.1 changes only these English key labels to “OK”, “Vol +” and “Vol −”, preserving the shared renderer and its established dimensions. Chinese names, all IDs/HID rules, artwork, geometry, defaults and full hardware descriptions are unchanged. The release is incremented because 1.0.0 has already been published; published package bytes are not silently replaced under the same version.
