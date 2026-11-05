@@ -1,0 +1,17 @@
+{
+  "sourceSHA256": "d799f438b5cfc5abfb62ba1cb1e96903b043e9fe2238db5189c1f5ae4152d467",
+  "canvas": [
+    724,
+    2172
+  ],
+  "bounds": [
+    100.75,
+    106.45,
+    624.3,
+    2106.4
+  ],
+  "radius": 12.5,
+  "samples": 16,
+  "layoutGeometrySHA256": "6543d01ff785f94dac66f2340fbc67f0c81964a9a075a5abb0c9f272b9c93213",
+  "inputsSHA256": "ed9456f2bdddaeb4269f12f12bc65cf2309a4a406ed59740d77af020c24a03da"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "xiaomi-2-pro",
+  "name": {
+    "zh": "小米蓝牙遥控器 2 Pro",
+    "en": "Xiaomi Bluetooth Remote 2 Pro"
+  },
+  "summary": {
+    "zh": "已适配的蓝牙遥控器，可用于应用切换、媒体选择和常用 Mac 操作。",
+    "en": "A supported Bluetooth remote for app switching, media selection, and everyday Mac actions."
+  },
+  "setup": {
+    "zh": [
+      "在 macOS 系统设置的蓝牙页面配对遥控器。",
+      "允许无限遥控器使用输入监控；模拟快捷键还需要辅助功能。",
+      "在应用中选择设备并检查按键映射。",
+      "如需 ChatGPT 听写，将 ChatGPT 听写快捷键设为 F5。"
+    ],
+    "en": [
+      "Pair the remote in macOS System Settings → Bluetooth.",
+      "Allow Input Monitoring for Infinite Remote; simulated shortcuts also require Accessibility.",
+      "Select the device in the app and check its button mappings.",
+      "For ChatGPT dictation, set the ChatGPT dictation shortcut to F5."
+    ]
+  },
+  "limitations": {
+    "zh": [
+      "无限遥控器当前未采集遥控器自身的麦克风音频。",
+      "原厂 NFC 标签尚未接入无限遥控器。",
+      "输入监听为非独占，遥控器原生系统行为可能同时发生。",
+      "在资源库中安装此型号，或导入本地 ZIP；更新需由同一来源提供更高版本。"
+    ],
+    "en": [
+      "Infinite Remote does not capture audio from the remote’s microphone.",
+      "The factory NFC tag is not integrated with Infinite Remote.",
+      "HID monitoring is non-exclusive; native system behavior may occur alongside mapped actions.",
+      "Install this model from the library or import its ZIP; updates require a higher release from the same source."
+    ]
+  }
+}
