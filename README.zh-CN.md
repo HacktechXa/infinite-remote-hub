@@ -1,6 +1,6 @@
 # Infinite Remote Hub · 型号适配库
 
-[English version](README.md)
+[支持设备](https://szhjia.github.io/infinite-remote-website/zh/devices/) · [English version](README.md)
 
 Infinite Remote 的独立遥控器适配库。首个型号是小米蓝牙遥控器 2 Pro。新型号使用 v2 包格式，包含中英文字、品牌图标、默认动作与行为声明；工具也接受旧版 v1 包。无需第三方 Python 包，要求 Python 3.10+。
 

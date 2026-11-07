@@ -1,6 +1,6 @@
 # Infinite Remote Hub
 
-[中文版本](README.zh-CN.md)
+[Supported remotes](https://szhjia.github.io/infinite-remote-website/en/devices/) · [中文版本](README.zh-CN.md)
 
 The independent remote-adaptation library for Infinite Remote. The first supported model is the Xiaomi Bluetooth Remote 2 Pro. New adapters use package format v2, with English/Chinese copy, brand artwork, explicit defaults and behavior. The validator also accepts legacy v1 packages. The tools require Python 3.10 or later and use only the Python standard library.
 
