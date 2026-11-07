@@ -3,7 +3,7 @@
   "id": "infinite-remote-official",
   "name": {
     "en": "Infinite Remote Hub",
-    "zh": "无限遥控器资源库"
+    "zh": "官方资源库"
   },
   "models": [
     {
@@ -44,7 +44,7 @@
           "Install this model from the library or import its ZIP; updates require a higher release from the same source."
         ]
       },
-      "release": "0.0.1",
+      "release": "0.0.2",
       "devices": [
         {
           "vendor": 10007,
@@ -53,16 +53,16 @@
       ],
       "preview": "assets/xiaomi-2-pro/front.png",
       "package": "packages/xiaomi-2-pro.zip",
-      "packageSHA256": "7ad92e6ed1b9a5ae31891aa25b48391691fc4704b01b073107a54b293da044d5",
+      "packageSHA256": "75173fe4e53f82a977418fdd929d449dac0b1474c06fafcb893184ff24ae6426",
       "sourceSHA256": {
-        "README.en.md": "7fd9bb85e85ac0daca15b87d7519dc22ff34da59d26e0ea4396796f807702895",
-        "README.zh.md": "8985db6bbd90b2430ef9b9c19694f22fc2d0b34c520ae4aba95df8836e8d20d1",
+        "README.en.md": "a9318b7634f853b0f1ce34efee746bad122deb7f4228bda3def5c7c62c581660",
+        "README.zh.md": "6b3dfff31fb9edc4b00e03f1fb1a41c008d8805a4f11ec6c1d9d0ab14e8148ac",
         "SOURCE.md": "ed3d9c8ec3896c6805437a4ccc757c41f1b0082ff9643866257e76a3ebecd8e7",
         "brand.png": "cbd7602e878c987180cbb14e86aa241541e3523e85362e1ac0bc7b896f93ea65",
         "front.png": "981bd8a7144d27d8a4cd3706843b4f2d2641450ce9eb27a563f7c6541b94b221",
         "inputs.json": "ed9456f2bdddaeb4269f12f12bc65cf2309a4a406ed59740d77af020c24a03da",
-        "layout.json": "6daa191e7c937525da0583265aea40dfc46c2a4dc48b708a42a494a709d81667",
-        "manifest.json": "6c2619d7739f44095d5f35e071dcf1974e65d5397a1e8c717d20e946a569da81",
+        "layout.json": "869231cb1f6479f882af5d71f4f0a3ed4fd74b08f4024ec9f234cd217df13a59",
+        "manifest.json": "a749355bb0087712793954f8980323c10b1611094945006f223dcff0c35ec228",
         "metadata.json": "0d430c9e985107c5638256b968945c5667838de01cc7116771f448225f500d14"
       },
       "brand": {

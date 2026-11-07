@@ -99,15 +99,33 @@ class PackageTests(unittest.TestCase):
         new_layout = json.loads((self.folder / 'layout.json').read_text())
         self.assertEqual({key['id']: key['name']['en'] for key in new_layout['keys'] if key['id'] in ('ok', 'plus', 'minus')},
                          {'ok': 'OK', 'plus': 'Vol +', 'minus': 'Vol −'})
-        self.assertEqual(new['release'], '0.0.1')
+        self.assertEqual(new['release'], '0.0.2')
         for key in new_layout['keys']:
             self.assertEqual(set(key['name']), {'en', 'zh'})
             key['name'] = key['name']['zh']
+            if key['id'] == 'plus':
+                old_plus = next(item for item in old_layout['keys'] if item['id'] == 'plus')
+                self.assertTrue(old_plus.pop('doublePress'))
+                self.assertTrue(old_plus.pop('longPress'))
         self.assertEqual(new_layout, old_layout)
         self.assertEqual(new['brand']['name'], {'en': 'Xiaomi', 'zh': '小米'})
         self.assertEqual(hub.hashes(self.folder, ['brand.png'])['brand.png'],
                          'cbd7602e878c987180cbb14e86aa241541e3523e85362e1ac0bc7b896f93ea65')
         self.assertEqual(hub.png_dimensions((self.folder / 'brand.png').read_bytes()), (196, 196))
+
+    def test_both_volume_keys_expose_single_press_only(self):
+        manifest = hub.validate(self.folder)
+        layout = json.loads((self.folder / 'layout.json').read_text())
+        for key in layout['keys']:
+            if key['id'] in ('plus', 'minus'):
+                self.assertFalse(key.get('doublePress'))
+                self.assertFalse(key.get('longPress'))
+        self.assertEqual(set(manifest['retiredGestureSlots']), {'plus-double', 'plus-long'})
+        for retired in (['plus'], ['nonexistent-long'], ['power-long'], ['plus-long', 'plus-long']):
+            with self.subTest(retired=retired):
+                self.edit('manifest.json', lambda value: value.update(retiredGestureSlots=retired))
+                with self.assertRaisesRegex(hub.InvalidPackage, 'Invalid retired gesture slots'):
+                    hub.validate(self.folder)
 
     def test_v2_required_localized_fields_need_nonempty_english(self):
         manifest_path = self.folder / 'manifest.json'
@@ -402,7 +420,7 @@ class PackageTests(unittest.TestCase):
         self.assertEqual(catalog['formatVersion'], 2)
         self.assertEqual(catalog['id'], 'infinite-remote-official')
         self.assertEqual(set(catalog['name']), {'en', 'zh'})
-        self.assertEqual(model['release'], '0.0.1')
+        self.assertEqual(model['release'], '0.0.2')
         self.assertEqual(model['brand']['id'], 'xiaomi')
         for path in (model['preview'], model['brand']['logo'], model['package']):
             self.assertFalse(Path(path).is_absolute())

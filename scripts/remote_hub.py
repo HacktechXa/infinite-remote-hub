@@ -21,7 +21,7 @@ ROOT = Path(__file__).resolve().parents[1]
 ID = re.compile(r"[a-z0-9][a-z0-9-]{0,62}\Z")
 RELEASE = re.compile(r"(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\Z")
 SOURCE_ID = 'infinite-remote-official'
-SOURCE_NAME = {'en': 'Infinite Remote Hub', 'zh': '无限遥控器资源库'}
+SOURCE_NAME = {'en': 'Infinite Remote Hub', 'zh': '官方资源库'}
 
 
 class InvalidPackage(ValueError):
@@ -98,6 +98,11 @@ def validate_declarations(manifest, keys):
     key_ids = {key['id'] for key in keys}
     slots = key_ids | {key['id'] + suffix for key in keys
                        for flag, suffix in [('doublePress', '-double'), ('longPress', '-long')] if key.get(flag)}
+    possible_gestures = {key + suffix for key in key_ids for suffix in ('-double', '-long')}
+    retired = manifest.get('retiredGestureSlots', [])
+    require(isinstance(retired, list)
+            and all(isinstance(slot, str) and slot in possible_gestures and slot not in slots for slot in retired)
+            and len(set(retired)) == len(retired), 'Invalid retired gesture slots')
     if manifest.get('target') is not None:
         target = manifest['target']
         require(isinstance(target, dict) and set(target) <= {'bundleID', 'path'}
